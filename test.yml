@@ -1,0 +1,36 @@
+# specify path to technology plugin
+vlsi.core.technology: asap7
+technology.asap7.pdk_install_dir: "/tools/B/asap7/asap7PDK_r1p7"
+technology.asap7.stdcell_install_dir: "/tools/B/asap7/asap7sc7p5t_27"
+
+# Generate Make include to aid in tlow
+vlsi.core.build_system: make
+
+vlsi.inputs.power_spec_type: "cpf"
+vlsi.inputs.power_spec_mode: "auto"
+
+synthesis.inputs:
+  top_module: "pass"
+  input_files: "src/pass.v"
+
+# Specify clock signals
+vlsi.inputs.clocks: [
+  {name: "clock", period: "5ns", uncertainty: "0.1ns"}
+]
+
+# Tool options.
+
+# Genus options
+vlsi.core.synthesis_tool: "genus"
+synthesis.genus.version: "201"
+# Innovus options
+vlsi.core.par_tool: "innovus"
+par.innovus.version: "191_ISR3"
+par.innovus.design_flow_effort: "standard"
+par.inputs.gds_merge: true
+
+# VCS options
+vlsi.core.sim_tool: "vcs"
+sim.vcs.version: "S-2021.09-SP1-1"
+sim.vcs.verdi_home: "/tools/synopsys/verdi/P-2019.06-SP2-12"
+sim.vcs.verdi_home_meta: lazysubst
