@@ -1,8 +1,3 @@
-# specify path to technology plugin
-vlsi.core.technology: asap7
-technology.asap7.pdk_install_dir: "/tools/B/asap7/asap7PDK_r1p7"
-technology.asap7.stdcell_install_dir: "/tools/B/asap7/asap7sc7p5t_27"
-
 # Generate Make include to aid in tlow
 vlsi.core.build_system: make
 
