@@ -34,3 +34,5 @@ vlsi.inputs.placement_constraints:
       bottom: 0
 
 vlsi.core.sim_tool: "hammer.sim.vcs"
+
+vlsi.core.lvs_tool: "hammer.lvs.calibre"
